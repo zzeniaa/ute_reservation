@@ -1,5 +1,5 @@
 # ute_reservation
-# extend_a_reservation
+
 A script that extends a reservation with given reservation number
 
 Giving a reservation number is mandatory.

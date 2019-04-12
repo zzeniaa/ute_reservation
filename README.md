@@ -15,7 +15,10 @@ There are different ways to get a password from user:
     - delete previous .py file;
     - finally, import the .pyc module to ute_reservation script and you can refer to your password variable as name_of_pyc_file.name_of_variable
       (i.e. foo.my_password)
-
+3. obtaining it from enviromental variable
+    - a new enviromental variable needs to be created (i.e. in Cmder/Windows Command Line: set PASS=my_password)
+    - its value should be the password 
+    
 Username is obtained from already existing enviromental variables, therefore there's no need to create new ones.
 
 To schedule the script to execute automatically, you can use Windows Task Scheduler:
@@ -31,6 +34,6 @@ To schedule the script to execute automatically, you can use Windows Task Schedu
   (i.e. C:\cmder\cmder.exe), under 'Add arguments' type the path of your .bat file(i.e. C:\scripts\ute.bat), under 'Start in' choose path 
   to the folder your bat file is in (i.e. C:\scripts) 
   
-  
+  Note: Script was tested using Cmder
 
 

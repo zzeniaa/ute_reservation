@@ -38,6 +38,14 @@ To schedule the script to execute automatically, you can use Windows Task Schedu
   to the folder your bat file is in (i.e. C:\scripts) 
   
   Note: Script was tested using Cmder
-  Note 2: You need to install Selenium python module (pip install selenium) and chromium web driver (or use Firefox/IE)
+  
+  Note 2: You need to install Selenium python module (pip install selenium) and chromium web driver (or use Firefox/IE) 
+
+Useful links:
+- Chromium Web Driver: http://chromedriver.chromium.org/ 
+- Selenium module: https://pypi.org/project/selenium/ or http://pypi.ute.inside.nsn.com/selenium/
+- Cmder: https://cmder.net/
+
+
 
 

@@ -3,6 +3,9 @@
 A script that extends a reservation with given reservation number
 
 Giving a reservation number is mandatory.
+Giving time duration is optional (default value is 1h).
+
+Usage: python ute_reservation.py 1234567 -t 3 
 
 There are different ways to get a password from user:
 1. asking user to type it in command line; 
@@ -35,5 +38,6 @@ To schedule the script to execute automatically, you can use Windows Task Schedu
   to the folder your bat file is in (i.e. C:\scripts) 
   
   Note: Script was tested using Cmder
+  Note 2: You need to install Selenium python module (pip install selenium) and chromium web driver (or use Firefox/IE)
 
 

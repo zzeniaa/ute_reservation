@@ -1,6 +1,4 @@
 from selenium import webdriver
-# from selenium.webdriver.support.ui import Select
-# from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import argparse
@@ -13,14 +11,23 @@ driver = webdriver.Chrome()
 
 parser = argparse.ArgumentParser(description="extending a reservation")
 parser.add_argument("number", help="reservation number", default="")
+parser.add_argument("--time", "-t", help="duration [hours]: 1, 2 or 3", default="")
 
 argument = parser.parse_args()
 status = False
 
-no = "https://cloud.ute.inside.nsn.com/reservation/" + argument.number + "/show"
+if argument.time == '2':
+    extend_2h = "https://cloud.ute.inside.nsn.com/reservation/" + argument.number + "/extend/120"
+    driver.get(extend_2h)
+    status = True
+if argument.time == '3':
+    extend_3h = "https://cloud.ute.inside.nsn.com/reservation/" + argument.number + "/extend/180"
+    driver.get(extend_3h)
+    status = True
+else:
+    extend_1h = "https://cloud.ute.inside.nsn.com/reservation/" + argument.number + "/extend/60"
+    driver.get(extend_1h)
 
-# open a website
-driver.get(no)
 driver.maximize_window()
 
 # login to the site
@@ -31,8 +38,8 @@ login.send_keys(username)
 login = driver.find_element_by_name("password")
 
 # password = getpass.getpass()  # asks user for a password
-# login.send_keys(p.password)  # gets password from imported pyc module
-login.send_keys(os.getenv("PASS", ''))  # gets password from custom env variable PASS
+login.send_keys(p.password)  # gets password from imported pyc module
+# login.send_keys(os.getenv("PASS", ''))  # gets password from custom env variable PASS
 time.sleep(5)
 submit = driver.find_element_by_xpath("//input[@id='id_login_btn']").click()
 

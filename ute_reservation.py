@@ -40,9 +40,10 @@ login = driver.find_element_by_name("password")
 # password = getpass.getpass()  # asks user for a password
 login.send_keys(p.password)  # gets password from imported pyc module
 # login.send_keys(os.getenv("PASS", ''))  # gets password from custom env variable PASS
-time.sleep(5)
+time.sleep(2)
 submit = driver.find_element_by_xpath("//input[@id='id_login_btn']").click()
 
 # closes a webbrowser window
+time.sleep(3)
 driver.close()
 

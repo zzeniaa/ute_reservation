@@ -32,8 +32,7 @@ driver.maximize_window()
 # login to the site
 login = driver.find_element_by_name("username")
 
-username = getpass.getuser()  # gets your username from env variable LOGNAME or USER
-login.send_keys(username)
+login.send_keys(getpass.getuser())  # gets your username from env variable LOGNAME or USER
 login = driver.find_element_by_name("password")
 
 # password = getpass.getpass()  # asks user for a password

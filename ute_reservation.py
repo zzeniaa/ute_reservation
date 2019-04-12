@@ -43,31 +43,6 @@ login.send_keys(p.password)  # gets password from imported pyc module
 time.sleep(5)
 submit = driver.find_element_by_xpath("//input[@id='id_login_btn']").click()
 
-# find duration of the testline
-t = driver.find_element_by_xpath("//div[@id='duration_chosen']")
-
-# initiate ActionChains to click and expand an option list
-action_chains = ActionChains(driver)
-action_chains.move_to_element(t)
-action_chains.click(t)
-time.sleep(2)
-action_chains.perform()
-time.sleep(2)
-
-# choose option '2h' from a list
-hours = driver.find_element_by_xpath("//div[@class='chosen-drop']/ul[@class='chosen-results']")
-action_chains.move_to_element(hours)
-time.sleep(2)
-action_chains.click(hours)
-time.sleep(2)
-action_chains.perform()
-
-time.sleep(5)
-
-# hit the extend button
-extend = driver.find_element_by_xpath("//input[@id='extend-button']")
-extend.click()
-
 # closes a webbrowser window
-# driver.close()
+driver.close()
 

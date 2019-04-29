@@ -11,7 +11,7 @@ parser.add_argument("-tl", "--testline", help="testline type", required=False, d
 parser.add_argument("directory", help="directory", default="")
 parser.add_argument("test", help="test suite name", default="")
 parser.add_argument("-s", "--state", help="eNB state", default="configured")
-parser.add_argument("-e", "--enb", help="eNB build; default is latest FSMr4 build on trunk", default="FL00_FSM4")
+parser.add_argument("-e", "--enb", help="eNB build; default is latest FSMr4 build on trunk", default="FL00_FSM")
 parser.add_argument("-u", "--ute", help="UTE build; default is the latest one", default="")
 parser.add_argument("-r", "--repo", help="test repository revision", required=False, default="HEAD")
 

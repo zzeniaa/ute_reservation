@@ -16,6 +16,7 @@
   * -s eNB state (choose from: ssh_only, configured, commissioned, enb_configured, enb_commissioned)
   * -tl testline type (default value is CLOUD_R4P)
   * -e eNB build (default is latest trunk build for chosen testline type i.e. for CLOUD_R4P, default would be latest FL00_FSM4 build)
+  * -s eNB state (default is *configured*)
   * -ute UTE build (default is the latest one)
   * -r repository revision (default is HEAD)
     
